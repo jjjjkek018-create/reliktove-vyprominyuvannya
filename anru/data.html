@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дані | Космологічні Параметри</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cursor-hint" id="global-hint">тисни!</div>
+
+    <div class="container">
+        <header class="main-header">
+            <div class="header-inner">
+                <span class="top-label">Прецизійна обробка сигналів</span>
+                <h1>Аналіз Спостережень</h1>
+                <p>Кількісні характеристики Всесвіту: від густини баріонів до напруженості Хаббла</p>
+            </div>
+        </header>
+
+        <nav class="nav-bar">
+            <a href="index.html">Історія та Еволюція</a>
+            <a href="simulation.html">Лабораторія Спектра</a>
+            <a href="theory.html">Теоретичний Базис</a>
+            <a href="data.html" class="active">Аналіз Даних</a>
+            <a href="instruments.html">Технології Детекції</a>
+        </nav>
+
+        <main>
+            <section class="content-card spacious">
+                <h2>Параметри моделі ΛCDM (Planck 2018)</h2>
+                <p class="intro-text">Нижче наведено основні космологічні константи. Натисніть на будь-який рядок таблиці, щоб розгорнути глибокий аналіз фізичних наслідків та похибок.</p>
+
+                <div class="data-table-matrix">
+                    <div class="table-header">
+                        <div class="col-param">Параметр</div>
+                        <div class="col-symbol">Символ</div>
+                        <div class="col-value">Значення</div>
+                    </div>
+
+                    <div class="mission-item expandable">
+                        <div class="mission-summary table-row-style">
+                            <div class="col-param">Стала Хаббла</div>
+                            <div class="col-symbol">H₀</div>
+                            <div class="col-value">67.36 ± 0.54 км/с/Мпк</div>
+                        </div>
+                        <div class="nerdy-content">
+                            <div class="details-grid">
+                                <div>
+                                    <h4>Hubble Tension (Напруженість)</h4>
+                                    <p>Існує розбіжність між даними Planck (67.4) та локальними вимірюваннями через Цефеїди (73.0). Це одна з найбільших загадок сучасної фізики. Якщо похибки розраховані вірно, це свідчить про необхідність розширення стандартної моделі.</p>
+                                </div>
+                                <div>
+                                    <h4>Горизонт частинок</h4>
+                                    <p>Значення H₀ прямо визначає масштаб космологічного горизонту. При поточному значенні, об'єкти з червоним зміщенням z > 1.5 вже віддаляються від нас зі швидкістю, що перевищує світлову.</p>
+                                </div>
+                            </div>
+                            <div class="math-mini">H(z) = H_0 \sqrt{\Omega_m(1+z)^3 + \Omega_\Lambda}</div>
+                        </div>
+                    </div>
+
+                    <div class="mission-item expandable">
+                        <div class="mission-summary table-row-style">
+                            <div class="col-param">Густина баріонів</div>
+                            <div class="col-symbol">Ωb h²</div>
+                            <div class="col-value">0.02237 ± 0.00015</div>
+                        </div>
+                        <div class="nerdy-content">
+                            <div class="details-grid">
+                                <div>
+                                    <h4>Баріонно-фотонне відношення</h4>
+                                    <p>Цей параметр визначає кількість баріонів на кожен фотон реліктового випромінювання. Це значення критично важливе для теорії нуклеосинтезу, оскільки воно диктує вихід легких елементів (дейтерію та гелію) у перші хвилини Всесвіту.</p>
+                                </div>
+                                <div>
+                                    <h4>Акустичні піки</h4>
+                                    <p>Висота другого акустичного піку в спектрі потужності CMB майже повністю визначається цим параметром. Він діє як "інерційна маса" у фотон-баріонній рідині.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mission-item expandable">
+                        <div class="mission-summary table-row-style">
+                            <div class="col-param">Холодна темна матерія</div>
+                            <div class="col-symbol">Ωc h²</div>
+                            <div class="col-value">0.1200 ± 0.0012</div>
+                        </div>
+                        <div class="nerdy-content">
+                            <div class="details-grid">
+                                <div>
+                                    <h4>Гравітаційний потенціал</h4>
+                                    <p>Темна матерія не взаємодіє з випромінюванням безпосередньо, але створює гравітаційні "колодязі", в які падають баріони. Без цього значення формування структур (галактик) почалося б значно пізніше.</p>
+                                </div>
+                                <div>
+                                    <h4>CDM vs WDM</h4>
+                                    <p>Дані Planck підтверджують саме "холодну" модель (CDM), де частинки мають нерелятивістські швидкості. Це обмежує масу гіпотетичних вімпів (WIMPs).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mission-item expandable">
+                        <div class="mission-summary table-row-style">
+                            <div class="col-param">Оптична товщина</div>
+                            <div class="col-symbol">τ</div>
+                            <div class="col-value">0.0544 ± 0.0073</div>
+                        </div>
+                        <div class="nerdy-content">
+                            <div class="details-grid">
+                                <div>
+                                    <h4>Епоха Реіонізації</h4>
+                                    <p>Параметр τ описує імовірність розсіювання фотонів CMB на вільних електронах після того, як перші зірки знову іонізували водень. Це наш головний інструмент вивчення "космічного світанку" (z ≈ 7-10).</p>
+                                </div>
+                                <div>
+                                    <h4>Придушення амплітуди</h4>
+                                    <p>Реіонізація дещо "замилює" анізотропію CMB на малих масштабах, зменшуючи амплітуду піків на фактор e⁻²τ.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                [Image of Planck cosmic microwave background power spectrum]
+
+            </section>
+
+            <section class="content-card">
+                <h2>Аномалії великих масштабів</h2>
+                <p>Дані, що не вкладаються в стандартну статистику.</p>
+                <div class="mission-matrix">
+                    <div class="mission-item expandable special">
+                        <div class="mission-summary">
+                            <span class="year">ΔT_min</span>
+                            <h3>Холодна пляма (Eridanus Cold Spot)</h3>
+                            <p>Аномально велика область з низькою температурою.</p>
+                        </div>
+                        <div class="nerdy-content">
+                            <p>Ця структура має діаметр близько 5 градусів. Ймовірність її виникнення в гауссовому випадковому полі становить менше 1%. Деякі теорії припускають існування гігантського супервойда (порожнечі), інші — навіть зіткнення з іншим Всесвітом (multiverse theory).</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Теорія | Фізика Анізотропії</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="header-inner">
+                <span class="top-label">Фізика раннього Всесвіту</span>
+                <h1>Теоретичний Базис</h1>
+                <p>Математичне описання первинних флуктуацій та акустичного горизонту</p>
+            </div>
+        </header>
+
+        <nav class="nav-bar">
+            <a href="index.html">Історія та Еволюція</a>
+            <a href="simulation.html">Лабораторія Спектра</a>
+            <a href="theory.html" class="active">Теоретичний Базис</a>
+            <a href="data.html">Аналіз Даних</a>
+            <a href="instruments.html">Технології Детекції</a>
+        </nav>
+
+        <main>
+            <div class="content-card expandable">
+                <div class="cursor-hint">тисни!</div>
+                <h2>Спектральний аналіз (С_l)</h2>
+                <p>Анізотропія температури зазвичай розкладається в ряд за сферичними гармоніками, що дозволяє аналізувати потужність флуктуацій на різних кутових масштабах.</p>
+                
+                <div class="nerdy-content">
+                    <div class="math-mini">
+                        ΔT/T (n) = Σ a_lm Y_lm(n) <br>
+                        C_l = ⟨|a_lm|²⟩
+                    </div>
+                    <p style="margin-top: 20px;">Коефіцієнт l відповідає кутовому масштабу θ ≈ 180°/l. Наприклад, l=200 відповідає приблизно 1 градусу на небі — це масштаб першого акустичного піку.</p>
+                </div>
+            </div>
+
+            <section class="content-card spacious">
+                <h2>Ключові фізичні ефекти</h2>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <h4 style="color: var(--accent);">Ефект Сакса-Вольфа</h4>
+                        <p>На великих кутових масштабах (низькі l) домінує зміна енергії фотонів через гравітаційне червоне зміщення. Фотони, що вилітають з областей з вищою густиною, втрачають більше енергії, долаючи сильніший гравітаційний потенціал.</p>
+                    </div>
+                    <div class="detail-item">
+                        <h4 style="color: var(--accent);">Акустичні осциляції</h4>
+                        <p>Баріон-фотонова плазма поводиться як пружна рідина. Гравітація намагається стиснути газ, а тиск випромінювання — розширити. Це створює стоячі хвилі звуку в ранньому Всесвіті.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
