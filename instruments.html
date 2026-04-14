@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Інструменти | Технології детекції</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cursor-hint" id="global-hint">тисни!</div>
+
+    <div class="container">
+        <header class="main-header">
+            <div class="header-inner">
+                <span class="top-label">Межа інженерних можливостей</span>
+                <h1>Технології Детекції</h1>
+                <p>Кріогенні системи, болометри та методи фільтрації точкових джерел</p>
+            </div>
+        </header>
+
+        <nav class="nav-bar">
+            <a href="index.html">Історія та Еволюція</a>
+            <a href="simulation.html">Лабораторія Спектра</a>
+            <a href="theory.html">Теоретичний Базис</a>
+            <a href="data.html">Аналіз Даних</a>
+            <a href="instruments.html" class="active">Технології Детекції</a>
+        </nav>
+
+        <main>
+            <section class="content-card">
+                <h2>Симуляція детекції точкового джерела</h2>
+                <p class="intro-text">Наведіть курсор на область сканування, щоб імітувати рух променя телескопа (Beam) через далеку зорю. Справа відображається відгук детектора (Signal Readout).</p>
+                
+                <div class="detection-sim-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; background: #000; padding: 20px; border: 1px solid var(--border);">
+                    <div class="scanner-view" style="position: relative;">
+                        <canvas id="scannerCanvas" width="450" height="300" style="width: 100%; border: 1px solid var(--color-primary); cursor: crosshair;"></canvas>
+                        <div style="position: absolute; top: 10px; left: 10px; color: var(--accent); font-family: monospace; font-size: 11px;">FOV: 2° x 1.5°</div>
+                    </div>
+                    <div class="readout-view">
+                        <canvas id="readoutCanvas" width="450" height="300" style="width: 100%; border: 1px solid var(--color-primary);"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-card expandable">
+                <div class="cursor-hint">тисни!</div>
+                <h2>Функція розмиття точки (PSF)</h2>
+                <p>Кожен телескоп має обмежену кутову роздільну здатність, яка визначається його дифракційною межею.</p>
+                <div class="nerdy-content">
+                    <div class="details-grid">
+                        <div>
+                            <h4>Профіль променя (Beam Profile)</h4>
+                            <p>Навіть якщо зоря є математичною точкою, телескоп бачить її як розмиту пляму. Математично це описується як двовимірне гауссове ядро. Чим більша антена, тим вужчий промінь і вища роздільна здатність.</p>
+                        </div>
+                        <div>
+                            <h4>Convolution (Згортка)</h4>
+                            <p>Спостережувана карта неба — це істинне небо, згорнуте з діаграмою спрямованості антени. Для місії Planck роздільна здатність становить від 5 до 30 кутових хвилин залежно від частоти.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-card spacious">
+                <h2>Кріогенні кріостати</h2>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <h4 style="color: var(--accent);">Охолодження до 100 мК</h4>
+                        <p>Для детекції надслабких флуктуацій температури CMB необхідно мінімізувати тепловий шум самих сенсорів. Сучасні болометри працюють при температурах, близьких до абсолютного нуля, що досягається за допомогою рефрижераторів розчинення ³He/⁴He.</p>
+                    </div>
+                    <div class="detail-item">
+                        <h4 style="color: var(--accent);">Superconducting Transition Edge Sensors (TES)</h4>
+                        <p>Ці сенсори використовують різку зміну опору металу при переході в стан надпровідності. Будь-яка зміна енергії (фотон CMB) викликає стрибок опору, який реєструється електронікою.</p>
+                    </div>
+                </div>
+            </section>
+            
+ <section class="content-card">
+    <h2>Проекти Наступного Десятиліття</h2>
+    <p class="intro-text">Сучасна космологія готується до переходу від вимірювання температури до прецизійного аналізу поляризації (B-мод). Натисніть на проект для технічного огляду.</p>
+
+    <div class="mission-matrix">
+        <div class="mission-item expandable special">
+            <div class="cursor-hint">тисни!</div>
+            <div class="mission-summary">
+                <span class="year">2030+</span>
+                <div>
+                    <h3>LiteBIRD (JAXA / International)</h3>
+                    <p>Ціль: Пошук первинних гравітаційних хвиль (B-моди)</p>
+                </div>
+            </div>
+            <div class="nerdy-content">
+                <div class="details-grid">
+                    <div>
+                        <h4>Тензорно-скалярне відношення (r)</h4>
+                        <p>LiteBIRD спроектований для досягнення чутливості σ(r) < 0.001. Це дозволить підтвердити або спростувати більшість моделей космічної інфляції, вимірявши поляризацію на великих кутових масштабах (рекомбінаційний та реіонізаційний піки).</p>
+                    </div>
+                    <div>
+                        <h4>Охолодження до 100 мК</h4>
+                        <p>Для досягнення такої точності інструмент використовуватиме адіабатичне розмагнічування (ADR) для охолодження 4500 болометрів. Це забезпечить стабільну роботу протягом 3 років спостережень у точці Лагранжа L2.</p>
+                    </div>
+                </div>
+                <div class="math-mini">P_{B} \propto r \cdot P_{T} \quad | \quad \text{Energy Scale of Inflation} \approx 10^{16} \text{ GeV}</div>
+            </div>
+        </div>
+
+        <div class="mission-item expandable">
+            <div class="cursor-hint">тисни!</div>
+            <div class="mission-summary">
+                <span class="year">2029+</span>
+                <div>
+                    <h3>CMB-S4 (Stage IV)</h3>
+                    <p>Ціль: Наземна мережа телескопів (Чилі та Антарктида)</p>
+                </div>
+            </div>
+            <div class="nerdy-content">
+                <div class="details-grid">
+                    <div>
+                        <h4>Маса нейтрино та N_eff</h4>
+                        <p>Завдяки величезній кількості детекторів (>500,000), CMB-S4 зможе виміряти сумарну масу нейтрино з точністю σ(Σm_ν) ≈ 15-20 меВ. Це допоможе визначити ієрархію мас нейтрино, що є критичним для фізики елементарних частинок.</p>
+                    </div>
+                    <div>
+                        <h4>Гравітаційне лінзування</h4>
+                        <p>Наземні спостереження мають вищу роздільну здатність на малих масштабах. Це дозволить побудувати найточнішу карту розподілу матерії у Всесвіті через ефект лінзування реліктових фотонів на структурах (Large Scale Structure).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mission-item expandable">
+            <div class="cursor-hint">тисни!</div>
+            <div class="mission-summary">
+                <span class="year">2024+</span>
+                <div>
+                    <h3>Simons Observatory</h3>
+                    <p>Ціль: Масштабування чутливості та вивчення темної енергії</p>
+                </div>
+            </div>
+            <div class="nerdy-content">
+                <div class="details-grid">
+                    <div>
+                        <h4>Детектори на основі ТЕS</h4>
+                        <p>Обсерваторія використовує тисячі Transition-Edge Sensors, згрупованих у модулі. Це забезпечує безпрецедентну швидкість збору даних, що дозволяє фільтрувати шуми земної атмосфери в реальному часі.</p>
+                    </div>
+                    <div>
+                        <h4>Внесок у ΛCDM</h4>
+                        <p>SO допоможе розв'язати проблему "Напруженості Хаббла", надавши незалежні дані високої точності, які можна буде порівняти з результатами місії Planck та локальними вимірюваннями через SN Ia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

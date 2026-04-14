@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторія CMB | Симуляція</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="header-inner">
+                <span class="top-label">Інтерактивна модель ΛCDM</span>
+                <h1>Акустичні Осциляції</h1>
+                <p>Експериментальна консоль для аналізу впливу параметрів густини на кутовий спектр</p>
+            </div>
+        </header>
+
+        <nav class="nav-bar">
+            <a href="index.html">Історія та Еволюція</a>
+            <a href="simulation.html" class="active">Лабораторія Спектра</a>
+            <a href="theory.html">Теоретичний Базис</a>
+            <a href="data.html">Аналіз Даних</a>
+            <a href="instruments.html">Технології Детекції</a>
+        </nav>
+
+        <main class="sim-layout" style="display: grid; grid-template-columns: 350px 1fr; gap: 40px;">
+            <aside class="content-card" style="padding: 30px;">
+                <h3>Параметри</h3>
+                <div class="control-group" style="margin: 30px 0;">
+                    <label style="display: block; color: var(--accent); margin-bottom: 10px;">Ωb h² (Баріони)</label>
+                    <input type="range" id="baryon" min="0.01" max="0.04" step="0.001" value="0.022" style="width:100%;">
+                    <p style="font-size: 12px; margin-top: 10px;">Визначає "ефективну масу" фотон-баріонної рідини.</p>
+                </div>
+                <div class="control-group">
+                    <label style="display: block; color: var(--accent); margin-bottom: 10px;">Ωc h² (Темна матерія)</label>
+                    <input type="range" id="cdm" min="0.05" max="0.25" step="0.005" value="0.120" style="width:100%;">
+                    <p style="font-size: 12px; margin-top: 10px;">Впливає на глибину потенціальних ям під час рекомбінації.</p>
+                </div>
+            </aside>
+
+            <section class="content-card" style="padding: 30px; background: #000;">
+                <canvas id="cmbCanvas" width="900" height="500" style="width: 100%;"></canvas>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
